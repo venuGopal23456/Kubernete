@@ -1,0 +1,76 @@
+Creating Single Cluster in Kubernetes
+1)Minikube start(Interact Kubernetes using kubectl (CLI)
+   Auto:Kubernetes Cluster start
+	Minikube starts VM 
+	Moving files to Cluster
+	Connecting to Cluster
+	Starting Cluster
+	Kubectl Config
+	Load images in config
+2)Kubectl
+	CLI for Kubernetes 
+	Display client and Server for version
+	Client-Kubectl;Server-Kubernetes
+        PTR:Minikube started a virtual machine for you, and a Kubernetes cluster is now running in that VM.
+        PTR:The cluster can be interacted with using the kubectl CLI. This is the main approach used for managing Kubernetes and the applications running on top of the cluster.
+3)Nodes are created.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Deploy a application
+1)Provide all the information about the application path for deployment by kubectl
+2)Operation done by Kubectl
+	=>Searched for suitable Node
+	=>Schedule the appication to run on the node
+	=>configured the cluster to reschedule on a new node
+        =>kubectl get deployments-to know running container
+3)To Interact with the other pods,we use proxy on another terminal
+4)Need Pods name to Interact via the proxy
+5)The url is the route to the API of the Pod.
+
+
+
+
+Explore pods
+1)Describe Pods give info about IP address,Ports and List of Events Related to the Lifecycle of Pods.
+2)Get info about Logs of the Container inside the pod.
+
+
+
+
+Exposing the app(Outside the Cluster)
+1)Create New Service  using Expose command
+2)To find what port was opened Externally,we Create Environment Variable.
+3)use label to query list of pods.
+4)Confirm the Service is not Reachable from outside.
+
+
+
+
+Scale Your app
+1)Increase the Replicas,which shows more Pods after Increasing.
+2)Load Balancing-we hit Different pod with every Request.
+3)Scale Down-Reduce the Replica.
+
+
+
+
+Update the app
+1)Change the Version of the app.
+2)Describe the pods to see the updated version.
+
+
+
+
+
